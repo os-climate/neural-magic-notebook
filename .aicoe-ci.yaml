@@ -1,0 +1,9 @@
+check:
+  - thoth-build
+build:
+  base-image: "quay.io/thoth-station/s2i-minimal-notebook:latest"
+  build-stratergy: Source
+  registry: quay.io
+  registry-org: os-climate
+  registry-project: neural-magic-notebook
+  registry-secret: os-climate-pusher-secret
