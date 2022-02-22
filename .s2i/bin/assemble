@@ -23,6 +23,11 @@ jupyter lab build
 
 MPLBACKEND=Agg python -c "import matplotlib.pyplot"
 
+# Import transformers from Neural Magic the first time to add additional packages missing (NOT CONTROLLED for now).
+# Installing sparseml-transformers dependencies if transformers is already installed in the environment, it will be overwritten.
+# Set environment variable NM_NO_AUTOINSTALL_TRANSFORMERS to disable
+python -c "from sparseml import transformers"
+
 # Make sure the S2I source directory is empty as we will use the image
 # produced to run further S2I builds
 
